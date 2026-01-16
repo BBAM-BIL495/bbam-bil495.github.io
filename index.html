@@ -37,19 +37,66 @@
                 </div>
             </div>
             <section class="section">
-                <h2>Full Project Report</h2>
+                <h2>Documentation & Reports</h2>
                 <p>Review the documentation including system architecture, technical design, and testing details below.</p>
-                <div class="report-container">
-                    <iframe src="https://docs.google.com/document/d/190DVLNlt5MvEy68DsRM5UgfmgE7Ic1dA/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview" title="BBAM Project Report">
-                        <p>Your browser does not support iframes. 
-                        <a href="https://docs.google.com/document/d/190DVLNlt5MvEy68DsRM5UgfmgE7Ic1dA/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview">Click here to view the report.</a>
-                        </p>
-                    </iframe>
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'main-report')">Main Project Report</button>
+                        <button class="tab-btn" onclick="openTab(event, 'proposal')">Project Proposal</button>
+                        <button class="tab-btn" onclick="openTab(event, 'specifications-report')">Project Specifications Report</button>
+                        <button class="tab-btn" onclick="openTab(event, 'analysis-report')">Analysis Report</button>
+                        <button class="tab-btn" onclick="openTab(event, 'high-level-design-report')">High Level Design Report</button>
+                    </div>
+                    <div id="main-report" class="tab-content active">
+                        <a href="https://docs.google.com/document/d/190DVLNlt5MvEy68DsRM5UgfmgE7Ic1dA/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview" target="_blank">🔗 Direct Link</a>
+                        <div class="report-wrapper">
+                            <iframe src="https://docs.google.com/document/d/190DVLNlt5MvEy68DsRM5UgfmgE7Ic1dA/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview"></iframe>
+                        </div>
+                    </div>
+                    <div id="proposal" class="tab-content">
+                        <a href="https://docs.google.com/document/d/1SbGQJVfp4wCEr4-IcOAJodTFR_Tabuv1/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview" target="_blank">🔗 Direct Link</a>
+                        <div class="report-wrapper">
+                            <iframe src="https://docs.google.com/document/d/1SbGQJVfp4wCEr4-IcOAJodTFR_Tabuv1/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview"></iframe>
+                        </div>
+                    </div>
+                    <div id="specifications-report" class="tab-content">
+                        <a href="https://docs.google.com/document/d/1T9r2a6Z1EG1qH4u9r7yVhOddM21nvOdc/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview" target="_blank">🔗 Direct Link</a>
+                        <div class="report-wrapper">
+                            <iframe src="https://docs.google.com/document/d/1T9r2a6Z1EG1qH4u9r7yVhOddM21nvOdc/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview"></iframe>
+                        </div>
+                    </div>
+                    <div id="analysis-report" class="tab-content">
+                        <a href="https://docs.google.com/document/d/1tZ14k5OIVlzPD76TMbJ05Nv8xFaP9rvo/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview" target="_blank">🔗 Direct Link</a>
+                        <div class="report-wrapper">
+                            <iframe src="https://docs.google.com/document/d/1tZ14k5OIVlzPD76TMbJ05Nv8xFaP9rvo/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview"></iframe>
+                        </div>
+                    </div>
+                    <div id="high-level-design-report" class="tab-content">
+                        <a href="https://docs.google.com/document/d/1_Y67nPnzgm6xdCp_KxnoB1EnsXhJDxMc/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview" target="_blank">🔗 Direct Link</a>
+                        <div class="report-wrapper">
+                            <iframe src="https://docs.google.com/document/d/1_Y67nPnzgm6xdCp_KxnoB1EnsXhJDxMc/edit?usp=sharing&ouid=116082868993779842423&rtpof=true&sd=true/preview"></iframe>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
         <footer>
             <p>TOBB ETU | Department of Computer Engineering | Spring 2026</p>
         </footer>
+        <script>
+            function openTab(evt, tabId) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tab-content");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].classList.remove("active");
+                }
+                tablinks = document.getElementsByClassName("tab-btn");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+                }
+                document.getElementById(tabId).classList.add("active");
+                evt.currentTarget.classList.add("active");
+            }
+        </script>
     </body>
 </html>
