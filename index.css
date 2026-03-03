@@ -140,8 +140,8 @@ footer {
     color: #6760f5;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .tabs {
         justify-content: center;
     }
-}
+} */
